@@ -15,7 +15,9 @@ Features:
 
 Search contacts
 
-Edit/add/remove gifts for seleceted contect
+Add/Edit/Remove occasion's
 
+Add/Edit/Remove gift's
 
+Search Amazon for gift within app (shopping tab => select gift)
 
