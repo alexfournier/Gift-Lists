@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Gift Do To Lists - Final</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="initial-scale=1, width=device-width, target-densitydpi=device-dpi" />
+	<link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+<div id="backfiller">
+    <p>&nbsp;</p>
+    <!-- this will show a background colour or image 
+    behind the pages which are transitioning -->
+</div>
+
+<div data-role="header">
+	<h1 id="pageTitle"><a href="#" class="back">&nbsp;</a><span>To be Changed</span></h1>
+</div>
+<!-- 
+				Planning Section
+ -->
+<div data-role="page" id="pPeople" class="">
+	<h2>Planning for People</h2>
+    <h3 class="msg">Choose a person</h3>
+    <ul data-role="listview" id="ulPpeople">
+    
+    </ul>
+</div>
+
+<div data-role="page" id="pOccasions" class="goneleft">
+	<h2>Planning for Occasions</h2>
+    <h3 class="msg">Choose an Occasion</h3>
+    <a href="#" class="add" id="btnAddOccasion">&nbsp;</a>
+    <ul data-role="listview" id="ulPoccasions">
+    
+    </ul>
+</div>
+
+<div data-role="page" id="pGifts" class="goneleft">
+	<h2>Planning Gifts</h2>
+    <h3 class="msg"></h3>
+    <a href="#" class="add" id="btnAddGift">&nbsp;</a>
+    <ul data-role="listview" id="ulPgifts">
+    
+    </ul>
+</div>
+
+<!-- 
+				Shopping Section
+ -->
+<div data-role="page" id="sOccasions" class="goneleft">
+	<h2>Shopping for Occasions</h2>
+    <h3 class="msg">Choose an Occasion</h3>
+    <ul data-role="listview" id="ulSoccasions">
+    
+    </ul>
+</div>
+
+<div data-role="page" id="sPeople" class="goneleft">
+	<h2>Shopping for People</h2>
+    <h3 class="msg">Choose a Person</h3>
+    <ul data-role="listview" id="ulSpeople">
+    
+    </ul>
+</div>
+
+<div data-role="page" id="sGifts" class="goneleft">
+	<h2>Shopping for Gifts</h2>
+    <h3 class="msg"></h3>
+    <script>
+        (function() {
+         var cx = '017943245259230181199:8npb7vcqidc';
+         var gcse = document.createElement('script');
+         gcse.type = 'text/javascript';
+         gcse.async = true;
+         gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+         '//www.google.com/cse/cse.js?cx=' + cx;
+         var s = document.getElementsByTagName('script')[0];
+         s.parentNode.insertBefore(gcse, s);
+         })();
+        </script>
+    <gcse:search></gcse:search>
+    <ul data-role="listview" id="ulSgifts">
+    
+    </ul>
+</div>
+<!-- 
+				Tabbed Navigation
+ -->
+<div id="sticky">
+	<ul class="nav">
+        <li><a href="#pPeople" class="mainNav" id="planLink">Planning</a></li>
+        <li><a href="#sOccasions" class="mainNav" id="shopLink">Shopping</a></li>
+    </ul>
+</div>
+	<script type="text/javascript" src="cordova-2.6.0.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

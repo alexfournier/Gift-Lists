@@ -1,0 +1,292 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face { 
+	font-family: Droid; 
+	src: local('Droid Sans'),
+		  url('../fonts/DroidSans.ttf'); 
+} 
+@font-face { 
+	font-family: DroidBold; 
+	font-weight:bold;
+	src: local('Droid Sans'),
+	             url('../fonts/DroidSans-Bold.ttf'); 
+} 
+/***************************************
+					DEFAULTS
+***************************************/
+*{
+	padding:0;
+	margin:0;
+}
+html,body{
+	color:#393939;
+    background-color:#e5e5e5;
+}
+h1, h2{
+	font-family:Droid;
+}
+h1{
+    padding:10px 0;
+	font-size:2em;
+}
+h2{
+    padding:8px 0 8px 12px;
+	font-size:1.5em;
+    border-bottom:3px solid #599fcc;
+}
+h3{
+	font-size:0.9em;
+	padding:15px 15px;
+}
+a{
+	color:#7e7e7e;	
+}
+
+/***************************************
+					LAYOUT
+***************************************/
+div[data-role="page"]{
+	height:100%;
+	width:100%;
+	background-color: #e5e5e5;
+	color:#516d9b;
+	clear:both;
+	position:absolute;
+	top: 66px;
+	right:0%; 
+	opacity: 1;
+	-webkit-transition: opacity 0.2s ease 0.4s;	
+	-webkit-transition: right 0.2s ease-in-out 0.2s;
+}
+div.goneleft[data-role="page"]{
+	opacity: 0;
+	right:-100%;
+	-webkit-transition: right 0.2s ease-in-out 0.2s;
+	-webkit-transition: opacity 0.2s ease 0.2s;
+}
+[data-role="page"] h2{
+	clear:both;
+}
+[data-role="page"] h3.msg{
+
+}
+a.add{
+	background:url("../img/add.png") no-repeat 0 0;
+	width:31.5px;
+	height:31.5px;	
+	float:right;
+	display:block;
+	margin: -40px 16.3px 0 0;	/* move it up over top of the h3.msg */
+}
+/***************************************
+					STICKY FOOTER
+***************************************/
+#backfiller{
+	min-height:100%;
+	background-color:#3ac180;
+}
+#sticky{
+	background-color:#000;	
+	color:#ddd;
+	position: fixed;
+    width:100%;
+	z-index:100;
+	margin-top: -60px; /*negative value of footer height */
+	height: 60px;
+	bottom:0;
+} 
+/***************************************
+					NAV BAR
+***************************************/
+ul.nav{
+	background-color:#000;
+	height:60px;
+}
+ul.nav li{
+	display:inline;
+	float:left;
+	width:50%;
+}
+ul.nav li a{
+	display:block;
+	
+	font-size:20px;
+	font-family:Droid;
+    
+	text-align:center;
+	text-decoration:none;
+	padding:20px 5px;
+	
+	background-color:transparent;
+	-webkit-transition-property: background-color;
+	-webkit-transition-duration:0.1s;
+	-webkit-transition-timing-function:linear;
+}
+ul.nav li a:active,
+ul.nav li a:focus{
+	background-color:rgba(255,255,51,0.32);
+	color:#3ac180;
+	-webkit-transition-property: background-color;
+	-webkit-transition-duration:0.4s;
+	-webkit-transition-timing-function:linear;
+}
+ul.nav li a.current{
+	background-color:#232323;
+	color:#36b6fd;
+    border-top: 3.5px solid #000;
+}
+/***************************************
+					PAGE HEADING
+***************************************/
+[data-role="header"]{
+	width:100%;
+	height:42px;
+	background-color:#157bba;
+	color: #fff;
+	position:fixed;
+	top:20px;
+	left:0;
+    z-index:200;
+    border-bottom:3px solid #024168;
+}
+[data-role="header"] h1{
+	text-align:center;
+	line-height:0px;
+	height:40px;
+    padding:20px;
+	text-overflow:hidden;
+}
+[data-role="header"] a.back{
+	float:left;
+	display:none;
+    position: absolute;
+    z-index:999;
+	text-decoration:none;
+	margin-top:-13px;
+    left:8.5px;
+	width:65px;
+	height:31px;
+	background:url("../img/back.png") no-repeat 0 0;
+}
+/***************************************
+					FORMS & OVERLAYS
+***************************************/
+
+
+/***************************************
+					LIST STYLES
+***************************************/
+ul[data-role="listview"]{
+	list-style:none;
+	clear:both;
+    width:100%;
+    padding-bottom:60px;
+    margin-top:-5px;
+}
+[data-role="listview"] li{
+	font-weight:bold;
+	color: #000;
+	text-decoration:none;
+    padding:10px 0 10px 20px;
+    background-color:#f6f6f6;
+    
+	margin: 0px 10px;
+    
+	border: solid 1px #b9b9b9;
+}
+[data-role="listview"] li:first-child{
+    border-top-right-radius:7px;
+    border-top-left-radius:7px;
+}
+[data-role="listview"] li:last-child{
+    border-bottom-right-radius:7px;
+    border-bottom-left-radius:7px;
+}
+[data-role="listview"] li a{
+	display:block;
+	margin:0;
+	font-weight:bold;
+	font-size: 1.2em;
+	color: #000;
+	text-decoration:none;
+    
+}
+
+#ulPoccasions a.delete{
+    margin-top:-28px;
+}
+#ulPoccasions a.edit{
+    margin-right:6px;
+    margin-top:-28px;
+}
+
+#ulSoccasions a.delete{
+    margin-top:-28px;
+}
+#ulSoccasions a.edit{
+    margin-top:-28px;
+    margin-right:6px;
+}
+
+#ulPgifts a.edit{
+    margin-right:6px;
+    margin-top:-3px;
+}
+#ulPgifts a.delete{
+    margin-right:6px;
+    margin-top:-3px;
+}
+
+#ulSgifts a.edit{
+    margin-right:6px;
+    margin-top:-3px;
+}
+#ulSgifts a.delete{
+    margin-top:-3px;
+}
+#ulSgifts a.delete{
+    margin-top:-3px;
+}
+#ulPgifts span{
+    font-size: 1.2em;
+}
+#sGifts ul{
+    padding-top:10px;
+}
+a.delete{
+    display:block;
+	background:url("../img/delete.png") no-repeat 0 0;
+	width:30px;
+	height:30px;
+    float:right;
+    padding-left:5px;
+}
+a.edit{
+    display:block;
+    background:url("../img/edit.png") no-repeat 0 0;
+	width:30px;
+	height:30px;
+    float:right;
+}
+li.purchased{
+	display:block;
+
+	margin:0 10px 0 10px;
+	
+    background:url("../img/purchased.png") no-repeat 0 0;
+	background-position:right center;	
+	background-width:30px;
+	background-height:30px;
+    background-color:#f6f6f6;
+}
+li.notpurchased{
+	display:block;
+    
+    margin:0 10px 0 10px;
+	
+    background:url("../img/notpurchased.png") no-repeat 0 0;
+	background-position:right center;	
+	background-width:30px;
+	background-height:30px;
+    background-color:#f6f6f6;
+}
